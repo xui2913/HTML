@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/iconfont.css" rel="stylesheet">
+    <style>
+
+        html body .iconfont{
+            font-size: 40px;
+        }
+        #wrap .hunt .search{
+            position: relative;
+            left: -50px;
+        }
+        #wrap .hunt .add{
+            position: relative;
+            left: -20px;
+        }
+        .top{
+            height: 50px;
+            border: solid 1px #ecf0f1;
+            font-size: 30px;
+            line-height: 50px;
+            background-color: #ecf0f1;
+        }
+        .test{
+            float: left;
+        }
+        #wrap .top #time{
+            width: 200px;
+            float: left;
+        }
+        #wrap .top .icons{
+            width: 150px;
+            float: right;
+            display: flex;/*弹性布局*/
+            justify-content: space-between;
+            flex-wrap: wrap;/*换行*/
+            align-content: space-between;/*垂直分布*/
+        }
+        #wrap .titiles{
+            height: 90px;
+            border: solid 1px #ecf0f1;
+            background-color: #ecf0f1;
+
+        }
+        #wrap ul .interval{
+            border: solid 1px #ecf0f1;
+            background-color: #ecf0f1;
+            width: 970px;
+            font-size: 40px;
+            line-height: 75px;
+            float: left;
+            position: relative;
+            left: -50px;
+        }
+        .titiles .tit-content{
+            width: 135px;
+            font-size: 45px;
+            line-height: 90px;
+            float: left;
+            font-family: 楷体;
+
+        }
+        .hunt{
+            width: 100px;
+            float: right;
+            font-size: 50px;
+            line-height: 90px;
+            display: flex;/*弹性布局*/
+            justify-content: space-between;
+            flex-wrap: wrap;/*换行*/
+            align-content: space-between;/*垂直分布*/
+        }
+        #wrap ul{
+
+            list-style: none;
+            height: 1500px;
+            overflow:scroll;
+
+        }
+        #wrap ul li{
+
+
+            opacity: 0.75;
+        }
+        #wrap .manager{
+            text-align:center;
+            display: flex;
+            height: 170px;
+            border: solid 1px #ecf0f1;
+            background-color: #ecf0f1;
+
+        }
+        #wrap .manager div{
+            flex:1;
+            opacity: 0.65;
+            font-family: 楷体;
+            border-top: solid 1px #707074;
+
+        }
+        html body .end{
+            font-size: 80px;
+            position: relative;
+            top: 20px;
+            left: -10px;
+        }
+        .tect-end{
+            font-size: 35px;
+            position: relative;
+            top: 20px;
+            left: -10px;
+        }
+        .htmla{
+            text-decoration-line: none;
+            color: #2a2a2c;
+        }
+        #wrap ul li .imgs{
+            font-size: 30px;
+            font-family: 楷体;
+            width: 145px;height: 145px;
+            float: left;
+
+        }
+        #wrap ul li .imgs img{
+            width: 140px;
+            height: 130px;
+            border-radius: 30px;
+        }
+        #wrap ul li .text-a{
+            color: black;
+            font-size: 50px;
+            line-height: 70px;
+            float: left;
+            font-family: 楷体;
+            position: relative;
+            top: 10px;
+            left: 50px;
+            width: 550px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        #wrap ul li .text-d{
+            color: black;
+            font-size: 50px;
+            line-height: 70px;
+            float: left;
+            font-family: 楷体;
+            position: relative;
+            top: 40px;
+            left: 50px;
+            width: 550px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        #wrap .manager .topcolor{
+            color: green;
+        }
+        #wrap .iconfont .tow{
+            position: relative;
+            top: 10px;
+            left: 50px;
+        }
+    </style>
+
+</head>
+<body>
+<div id="wrap">
+    <div class="top">
+         <span id="time">
+           <script>/*实时时间显示*/
+           setInterval("fun(time)",1);
+           function fun(timeID){
+               var date=new Date();//创建对象
+               var h=date.getHours();
+               var min=date.getMinutes();
+               var s=date.getSeconds();
+               if (h<12){
+                   h=h;
+               }
+               else {
+                   h=-12+h;
+               }
+               if (min<10){
+                   min="0"+min;
+               }
+               if (h>12){
+                   s="下午";
+               }
+               else {
+                   s="上午";
+               }
+               document.getElementById(timeID.id).innerHTML=s+h+":"+min
+           }
+        </script></span>
+        <div class="icons">
+            <span class="iconfont test">&#xe614;</span>
+            <span class="iconfont test">&#xeb07;</span>
+            <span class="iconfont test">&#xe617;</span>
+        </div>
+    </div>
+    <div class="titiles">
+        <div class="tit-content">通讯录</div>
+        <div class="hunt">
+            <div class="iconfont search">&#xe615;</div>
+            <div class="iconfont add">&#xe68a;</div>
+        </div>
+    </div>
+    <div>
+        <ul>
+            <a href="">
+                <li>
+                    <div class="imgs" >
+                        <img src="img/新的朋友.png" alt=""  >
+                    </div>
+                    <div style="width:65% ; height: 145px;float: left; border-bottom:solid 1px #c3c2ca;">
+                        <div class="text-d">新的朋友</div>
+                    </div>
+                    <div class="imgs" style="border-bottom:solid 1px #c3c2ca;"></div>
+                </li>
+            </a>
+            <a href="">
+                <li>
+                    <div class="imgs" >
+                        <img src="img/群聊.png" alt=""  >
+                    </div>
+                    <div style="width:65% ; height: 145px;float: left; border-bottom:solid 1px #c3c2ca;">
+                        <div class="text-d">群聊</div>
+                    </div>
+                    <div class="imgs" style="border-bottom:solid 1px #c3c2ca;"></div>
+                </li>
+            </a>
+            <a href="">
+                <li>
+                    <div class="imgs" >
+                        <img src="img/标签.png" alt=""  >
+                    </div>
+                    <div style="width:65% ; height: 145px;float: left; border-bottom:solid 1px #c3c2ca;">
+                        <div class="text-d">标签</div>
+                    </div>
+                    <div class="imgs" style="border-bottom:solid 1px #c3c2ca;"></div>
+                </li>
+            </a>
+            <a href="">
+                <li>
+                    <div class="imgs" >
+                        <img src="img/公众号.png" alt=""  >
+                    </div>
+                    <div style="width:65% ; height: 145px;float: left; border-bottom:solid 1px #c3c2ca;">
+                        <div class="text-d">公众号</div>
+                    </div>
+                    <div class="imgs" style="border-bottom:solid 1px #c3c2ca;"></div>
+                </li>
+            </a>
+            <div class="interval">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A</div>
+            <a href="">
+                <li>
+                    <div class="imgs" >
+                        <img src="img/阿豪.jpg" alt=""  >
+                    </div>
+                    <div style="width:65% ; height: 145px;float: left; border-bottom:solid 1px #c3c2ca;">
+                        <div class="text-a">阿豪</div>
+                    </div>
+                    <div class="imgs" style="border-bottom:solid 1px #c3c2ca;">
+                    </div>
+                </li>
+            </a>
+            <div class="interval">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C</div>
+            <a href="">
+                <li>
+                    <div class="imgs" >
+                        <img src="img/陈修.jpg" alt=""  >
+                    </div>
+                    <div style="width:65% ; height: 145px;float: left; border-bottom:solid 1px #c3c2ca;">
+                        <div class="text-a">陈修</div>
+                    </div>
+                    <div class="imgs" style="border-bottom:solid 1px #c3c2ca;">
+                    </div>
+                </li>
+            </a>
+            <div class="interval">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D</div>
+            <a href="">
+                <li>
+                    <div class="imgs" >
+                        <img src="img/dong5.jpg" alt=""  >
+                    </div>
+                    <div style="width:65% ; height: 145px;float: left; border-bottom:solid 1px #c3c2ca;">
+                        <div class="text-a">东软睿道</div>
+                    </div>
+                    <div class="imgs" style="border-bottom:solid 1px #c3c2ca;">
+                    </div>
+                </li>
+            </a>
+            <div class="interval">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;K</div>
+            <a href="">
+                <li>
+                    <div class="imgs" >
+                        <img src="img/贾老师.jpg" alt=""  >
+                    </div>
+                    <div style="width:65% ; height: 145px;float: left; border-bottom:solid 1px #c3c2ca;">
+                        <div class="text-a">酷博机器人~贾伟升老师</div>
+                    </div>
+                    <div class="imgs" style="border-bottom:solid 1px #c3c2ca;">
+                    </div>
+                </li>
+            </a>
+            <a href="">
+                <li>
+                    <div class="imgs" >
+                        <img src="img/赵建瑞.jpg" alt=""  >
+                    </div>
+                    <div style="width:65% ; height: 145px;float: left; border-bottom:solid 1px #c3c2ca;">
+                        <div class="text-a">酷博机器人~赵大锤</div>
+                    </div>
+                    <div class="imgs" style="border-bottom:solid 1px #c3c2ca;">
+                    </div>
+                </li>
+            </a>
+            <div class="interval">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L</div>
+            <a href="">
+                <li>
+                    <div class="imgs" >
+                        <img src="img/刘浩.jpg" alt=""  >
+                    </div>
+                    <div style="width:65% ; height: 145px;float: left; border-bottom:solid 1px #c3c2ca;">
+                        <div class="text-a">刘浩</div>
+                    </div>
+                    <div class="imgs" style="border-bottom:solid 1px #c3c2ca;">
+                    </div>
+                </li>
+            </a>
+            <a href="">
+                <li>
+                    <div class="imgs" >
+                        <img src="img/7F2E4CDEEBB00F5C90E459AC71729A5D.png" alt=""  >
+                    </div>
+                    <div style="width:65% ; height: 145px;float: left; border-bottom:solid 1px #c3c2ca;">
+                        <div class="text-a">路人甲</div>
+                    </div>
+                    <div class="imgs" style="border-bottom:solid 1px #c3c2ca;">
+                    </div>
+                </li>
+            </a>
+            <div class="interval">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Q</div>
+            <a href="">
+                <li>
+                    <div class="imgs" >
+                        <img src="img/麒麟.jpg" alt=""  >
+                    </div>
+                    <div style="width:65% ; height: 145px;float: left; border-bottom:solid 1px #c3c2ca;">
+                        <div class="text-a">麒麟</div>
+                    </div>
+                    <div class="imgs" style="border-bottom:solid 1px #c3c2ca;">
+                    </div>
+                </li>
+            </a>
+            <div class="interval">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S</div>
+            <a href="">
+                <li>
+                    <div class="imgs" >
+                        <img src="img/8113A03CAB8C3C03D2B7337320C56F01.png" alt=""  >
+                    </div>
+                    <div style="width:65% ; height: 145px;float: left; border-bottom:solid 1px #c3c2ca;">
+                        <div class="text-a">是谁的心啊~</div>
+                    </div>
+                    <div class="imgs" style="border-bottom:solid 1px #c3c2ca;">
+                    </div>
+                </li>
+            </a>
+            <div class="interval">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X</div>
+            <a href="">
+                <li>
+                    <div class="imgs" >
+                        <img src="img/夏沐.jpg" alt=""  >
+                    </div>
+                    <div style="width:65% ; height: 145px;float: left; border-bottom:solid 1px #c3c2ca;">
+                        <div class="text-a">夏茜茜</div>
+                    </div>
+                    <div class="imgs" style="border-bottom:solid 1px #c3c2ca;">
+                    </div>
+                </li>
+            </a>
+            <a href="">
+                <li>
+                    <div class="imgs" >
+                        <img src="img/小明.jpg" alt=""  >
+                    </div>
+                    <div style="width:65% ; height: 145px;float: left; border-bottom:solid 1px #c3c2ca;">
+                        <div class="text-a">小明同学~</div>
+                    </div>
+                    <div class="imgs" style="border-bottom:solid 1px #c3c2ca;">
+                    </div>
+                </li>
+            </a>
+
+
+
+
+
+
+
+        </ul>
+        <div class="manager">
+            <div><a href="微信页面.html" class="htmla"><span class="iconfont end">&#xe62a;</span><br><span class="tect-end">微信</span></a></div>
+            <div><a href="微信页面通讯录.html" class="htmla"><span class="iconfont end topcolor">&#xe669;</span><br><span class="tect-end topcolor">通讯录</span></a></div>
+            <div><a href="微信页面发现.html" class="htmla"><span class="iconfont end">&#xe746;</span><br><span class="tect-end">发现</span></a></div>
+            <div><a href="微信页面我.html" class="htmla"><span class="iconfont end">&#xe758;</span><br><span class="tect-end">我</span></a></div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

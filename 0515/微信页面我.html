@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/iconfont.css" rel="stylesheet">
+    <style>
+
+        html body .iconfont{
+            font-size: 40px;
+        }
+        #wrap .hunt .search{
+            position: relative;
+            left: -20px;
+            top: 10px;
+        }
+        #wrap .hunt .add{
+            position: relative;
+            left: -20px;
+        }
+        .top{
+            height: 50px;
+            border: none 1px white;
+            font-size: 30px;
+            line-height: 50px;
+            background-color: white;
+        }
+        .test{
+            float: left;
+        }
+        #wrap .top #time{
+            width: 200px;
+            float: left;
+        }
+        #wrap .top .icons{
+            width: 150px;
+            float: right;
+            display: flex;/*弹性布局*/
+            justify-content: space-between;
+            flex-wrap: wrap;/*换行*/
+            align-content: space-between;/*垂直分布*/
+        }
+        #wrap .titiles{
+            height: 300px;
+            border: none 1px white;
+            background-color: white;
+
+        }
+        #wrap ul .interval{
+            border: none 1px #ecf0f1;
+            background-color: #ecf0f1;
+            width: 970px;
+            height: 10px;
+            color: transparent;
+            outline: none;
+            float: left;
+            position: relative;
+            left: -50px;
+        }
+        #wrap ul .interval-a{
+            border: none 1px #ecf0f1;
+            background-color: #ecf0f1;
+            width: 970px;
+            color: transparent;
+            outline: none;
+            line-height: 590px;
+            float: left;
+            position: relative;
+            left: -50px;
+        }
+        #wrap .titiles .tit-content{
+            float: left;
+            border-radius: 30px;
+            position: relative;
+            top: 80px;
+            left: 60px;
+        }
+        .hunt{
+            width: 100px;
+            float: right;
+            font-size: 50px;
+            line-height: 90px;
+            display: flex;/*弹性布局*/
+            justify-content: space-between;
+            flex-wrap: wrap;/*换行*/
+            align-content: space-between;/*垂直分布*/
+        }
+        #wrap ul{
+            list-style: none;
+            height: 1500px;
+            overflow:scroll;
+        }
+        #wrap ul li{
+
+
+            opacity: 0.75;
+        }
+        #wrap .manager{
+            text-align:center;
+            display: flex;
+            height: 170px;
+            border: none 1px #ecf0f1;
+            background-color: #ecf0f1;
+
+        }
+        #wrap .manager div{
+            flex:1;
+            opacity: 0.65;
+            font-family: 楷体;
+            border-top: none;
+
+        }
+        html body .end{
+            font-size: 80px;
+            position: relative;
+            top: 20px;
+            left: -10px;
+        }
+        .tect-end{
+            font-size: 35px;
+            position: relative;
+            top: 20px;
+            left: -10px;
+        }
+        .htmla{
+            text-decoration-line: none;
+            color: #2a2a2c;
+        }
+        #wrap ul li .imgs{
+             font-size: 70px;
+             width: 145px;
+             height: 145px;
+             float: left;
+         }
+        #wrap ul li .imgs-a{
+            font-size: 70px;
+            width: 145px;
+            height: 145px;
+            float: left;
+            position: relative;
+            top: 40px;
+            color: green;
+        }
+        #wrap ul li .imgs-b{
+            font-size: 85px;
+            width: 145px;
+            height: 145px;
+            float: left;
+            position: relative;
+            top: 27px;
+            left: -10px;
+            color: red;
+        }
+        #wrap ul li .imgs-c{
+            font-size: 80px;
+            width: 145px;
+            height: 145px;
+            float: left;
+            position: relative;
+            top: 10px;
+            left: -10px;
+            color: darkmagenta;
+        }
+        #wrap ul li .imgs-d{
+            font-size: 80px;
+            width: 145px;
+            height: 145px;
+            float: left;
+            position: relative;
+            top: 25px;
+            left: -10px;
+            color: #f4ea2a;
+        }
+        #wrap ul li .imgs-e{
+            font-size: 80px;
+            width: 145px;
+            height: 145px;
+            float: left;
+            position: relative;
+            top: 25px;
+            left: -10px;
+            color: deeppink;
+        }
+        #wrap ul li .imgs-f{
+            font-size: 80px;
+            width: 145px;
+            height: 145px;
+            float: left;
+            position: relative;
+            top: 25px;
+            left: -10px;
+            color: aqua;
+        }
+        #wrap ul li .imgs img{
+            width: 90px;
+            height: 90px;
+            border-radius: 30px;
+            position: relative;
+            top: 20px;
+            left: -20px;
+        }
+        #wrap ul li .text-a{
+            color: black;
+            font-size: 50px;
+            line-height: 70px;
+            float: left;
+            font-family: 楷体;
+            position: relative;
+            top: 25px;
+            left: -40px;
+            width: 550px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        #wrap ul li .text-d{
+            color: black;
+            font-size: 50px;
+            line-height: 70px;
+            float: left;
+            font-family: 楷体;
+            position: relative;
+            top: 40px;
+            left: -40px;
+            width: 550px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        #wrap .manager .topcolor{
+            color: green;
+        }
+        #wrap ul li .text-e{
+            width: 90px;
+            height: 90px;
+            float: left;
+            position: relative;
+            top: -20px;
+            left: 680px;
+
+        }
+        #wrap .titiles .name{
+            font-size: 50px;
+            font-family: 楷体;
+            width: 300px;
+            height: 45px;
+            float: left;
+            position: relative;
+            top: 80px;
+            left: 100px;
+        }
+        #wrap .titiles .namenew{
+            font-size: 35px;
+            font-family: 楷体;
+            width: 300px;
+            height: 45px;
+            float: left;
+            position: relative;
+            top: 190px;
+            left: -190px;
+        }
+        #wrap .titiles .text-f{
+            width: 90px;
+            height: 90px;
+            float: left;
+            position: relative;
+            top: 145px;
+            left: 680px;
+        }
+        #wrap .titiles .tow{
+            border:solid 1px black;
+            width: 70px;
+            height: 50px;
+            position: relative;
+            left: 800px;
+            top: 193px;
+            text-decoration-line: none;
+            color: #2a2a2c;
+        }
+    </style>
+
+</head>
+<body>
+<div id="wrap">
+    <div class="top">
+         <span id="time">
+           <script>/*实时时间显示*/
+           setInterval("fun(time)",1);
+           function fun(timeID){
+               var date=new Date();//创建对象
+               var h=date.getHours();
+               var min=date.getMinutes();
+               var s=date.getSeconds();
+               if (h<12){
+                   h=h;
+               }
+               else {
+                   h=-12+h;
+               }
+               if (min<10){
+                   min="0"+min;
+               }
+               if (h>12){
+                   s="下午";
+               }
+               else {
+                   s="上午";
+               }
+               document.getElementById(timeID.id).innerHTML=s+h+":"+min
+           }
+        </script></span>
+        <div class="icons">
+            <span class="iconfont test">&#xe614;</span>
+            <span class="iconfont test">&#xeb07;</span>
+            <span class="iconfont test">&#xe617;</span>
+        </div>
+    </div>
+    <div class="titiles">
+        <div class="tit-content"><img src="img/陈修.jpg" width="185px" height="185px"></div>
+        <div class="name">洳紇羅羅亣鴋</div>
+        <div class="namenew">微信号：cx140141</div>
+        <div class="hunt">
+            <div class="iconfont search">&#xe624;</div>
+        </div>
+        <a href="">
+            <div class="text-f"><img src="img/箭头.png" alt=""></div>
+        </a>
+
+    </div>
+    <div>
+        <ul>
+            <div class="interval">A</div>
+            <a href="">
+                <li>
+                    <div class="iconfont imgs-a" >
+                        &#xe606;
+                    </div>
+                    <div style="width:65% ; height: 145px;float: left; border-bottom:solid 1px #c3c2ca;">
+                        <div class="text-d">支付</div>
+                        <div class="text-e"><img src="img/箭头.png" alt=""></div>
+                    </div>
+                    <div class="imgs" style="border-bottom:solid 1px #c3c2ca;"></div>
+                </li>
+            </a>
+            <div class="interval">C</div>
+            <a href="">
+                <li>
+                    <div class="iconfont imgs-b" >
+                        &#xe63c;
+                    </div>
+                    <div style="width:65% ; height: 145px;float: left; border-bottom:solid 1px #c3c2ca;">
+                        <div class="text-d">收藏</div>
+                        <div class="text-e"><img src="img/箭头.png" alt=""></div>
+                    </div>
+                    <div class="imgs" style="border-bottom:solid 1px #c3c2ca;"></div>
+                </li>
+            </a>
+            <a href="">
+                <li>
+                    <div class="iconfont imgs-c" >
+                        &#xe601;
+                    </div>
+                    <div style="width:65% ; height: 145px;float: left; border-bottom:solid 1px #c3c2ca;">
+                        <div class="text-a">相册</div>
+                        <div class="text-e"><img src="img/箭头.png" alt=""></div>
+                    </div>
+                    <div class="imgs" style="border-bottom:solid 1px #c3c2ca;">
+                    </div>
+                </li>
+            </a>
+            <a href="">
+                <li>
+                    <div class="iconfont imgs-d" >
+                        &#xe628;
+                    </div>
+                    <div style="width:65% ; height: 145px;float: left; border-bottom:solid 1px #c3c2ca;">
+                        <div class="text-d">卡包</div>
+                        <div class="text-e"><img src="img/箭头.png" alt=""></div>
+                    </div>
+                    <div class="imgs" style="border-bottom:solid 1px #c3c2ca;"></div>
+                </li>
+            </a>
+            <a href="">
+                <li>
+                    <div class="iconfont imgs-e" >
+                        &#xe600;
+                    </div>
+                    <div style="width:65% ; height: 145px;float: left; border-bottom:solid 1px #c3c2ca;">
+                        <div class="text-a">表情</div>
+                        <div class="text-e"><img src="img/箭头.png" alt=""></div>
+                    </div>
+                    <div class="imgs" style="border-bottom:solid 1px #c3c2ca;">
+                    </div>
+                </li>
+            </a>
+            <div class="interval">D</div>
+            <a href="">
+                <li>
+                    <div class="iconfont imgs-f" >
+                        &#xe61b;
+                    </div>
+                    <div style="width:65% ; height: 145px;float: left; border-bottom:solid 1px #c3c2ca;">
+                        <div class="text-a">设置</div>
+                        <div class="text-e"><img src="img/箭头.png" alt=""></div>
+                    </div>
+                    <div class="imgs" style="border-bottom:solid 1px #c3c2ca;">
+                    </div>
+                </li>
+            </a>
+            <div class="interval-a">X</div>
+        </ul>
+        <div class="manager">
+            <div><a href="微信页面.html" class="htmla"><span class="iconfont end">&#xe62a;</span><br><span class="tect-end">微信</span></a></div>
+            <div><a href="微信页面通讯录.html" class="htmla"><span class="iconfont end">&#xe655;</span><br><span class="tect-end">通讯录</span></a></div>
+            <div><a href="微信页面发现.html" class="htmla"><span class="iconfont end ">&#xe746;</span><br><span class="tect-end ">发现</span></a></div>
+            <div><a href="微信页面我.html" class="htmla"><span class="iconfont end topcolor">&#xe605;</span><br><span class="tect-end topcolor">我</span></a></div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
